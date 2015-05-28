@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
         
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/gisinc.css" id="theme">
+		<link rel="stylesheet" href="css/theme/gisinc2.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,11 +41,122 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            GISi
+      	            <h2>Five <em>easy</em> things <em>you</em> can do to write better code</h2>
 				</section>
+                <section>
+                    <section>
+                        <h2>Why do we care?</h2>
+                    </section>
+                    <section>
+                        <h2 class="fragment">Cost</h2>
+                        <ul>
+                            <li class="fragment">Adding new features</li>
+                            <li class="fragment">Reducing defects</li>
+                            <li class="fragment">Reusing code</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="fragment">Reputation</h2>
+                        <h3 class="fragment">People will read your code!</h3>
+                        <ul>
+                            <li class="fragment">Shared contracts</li>
+                            <li class="fragment">Subcontracts</li>
+                            <li class="fragment">Client dev teams</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>What this talk is not about:</h2>
+                    <ul>
+                        <li class="fragment">
+                            <h3 class="fragment">Language</h3>
+                            <p class="fragment">C# / Javascript / Python / Avenue</p>
+                        </li>
+                        <li>
+                            <h3 class="fragment">Architecture</h3>
+                            <p class="fragment">MVC / MVP / MVVM / UI / BLL / DTO / DAL</p>
+                        </li>
+                        <li class="fragment">
+                            <h3 class="fragment">Tooling</h3>
+                            <p class="fragment">Git / Jira / Resharper</p>
+                        </li>
+                    </ul>
+                    <h2 class="fragment">These things won't save you!</h2>
+                </section>
 				<section>
-      	            <a href="http://gisinc.com">Check out our website</a>
+      	            <h1>What this talk is about:</h1>
+                    <p class="fragment">Fundamentals</p>
+                    <p class="fragment">Continuous Improvement</p>
+                    <p class="fragment">Reviewing your own code</p>
 			    </section>
+                <section>
+                    <h1>1. Choose meaningful names</h1>
+                    <section>
+                        <h1>Make them descriptive</h1>
+                    </section>
+                    <section>
+                        <h1>Context is (really) important</h1>
+                    </section>
+                    <section>
+                        <h1>Lean on your tools</h1>
+                        <p class="fragment">
+                            Refactor -> Rename
+                            Visual Studio:  (C-r, r)
+                            JetBrains: Shift + F6
+                        </p>
+                    </section>
+                </section>
+                <section>
+
+                    <section>
+                    <h1>2. Write shorter functions</h1>
+                    <p class="fragment">
+                        No...seriously.  Shorter than that.
+                    </p>
+                    </section>
+                    <section>
+                        <h1>Isolate individual cases</h1>
+                    </section>
+                    <section>
+                        <h1>Complex conditionals</h1>
+                        <pre><code class="javascript">
+_checkClickLocation: function (clickEvent) {
+    if (this._mouseClickIsOutsideToolsContainer(containerPosition, clickEvent)) {
+        this._hideLayerTools();
+    }
+},
+
+_mouseClickIsOutsideToolsContainer: function (container, target) {
+    return target.x < container.x ||
+    target.x > container.x + container.w ||
+    target.y < container.y ||
+    target.y > container.y + container.h;
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Avoid anonymous functions</h1>
+                    </section>
+                    <section class="fragment">
+                        <h1>Lean on your tools</h1>
+                        <p class="fragment">
+                            Refactor -> Extract Method
+                            <br/>
+                            Visual Studio: (C-r, e)
+                            <br/>
+                            JetBrains: (C + Alt + m)
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <h1>3. Avoid side effects</h1>
+                </section>
+                <section>
+                    <h1>4. Refactor now (Always be refactoring)</h1>
+                </section>
+                <section>
+                    <h1>5. Automate</h1>
+                </section>
 		    </div>
 
             <div class="top-bar"> &nbsp;	</div>
