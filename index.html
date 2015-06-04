@@ -29,6 +29,9 @@
 				document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+
+        <script src="http://smoothiecharts.org/smoothie.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -41,121 +44,128 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>Five <em>easy</em> things <em>you</em> can do to write better code</h2>
+      	            <h2>Peripherals</h2>
+                    <img data-src="img/gibson.jpg"/>
 				</section>
                 <section>
                     <section>
-                        <h2>Why do we care?</h2>
-                    </section>
-                    <section>
-                        <h2 class="fragment">Cost</h2>
+                        <h2>What is a peripheral?</h2>
+                        <blockquote class="fragment">"A useful circuit that's built onto the chip itself" - IMF</blockquote>
+                        <h3 class="fragment">Hardware, not software</h3>
                         <ul>
-                            <li class="fragment">Adding new features</li>
-                            <li class="fragment">Reducing defects</li>
-                            <li class="fragment">Reusing code</li>
+                            <li class="fragment">Can run simultaneously</li>
+                            <li class="fragment">Low power consumption</li>
+                            <li class="fragment">Could be anything! (JPEG compression on imagers, processor cores on FPGA)</li>
                         </ul>
                     </section>
                     <section>
-                        <h2 class="fragment">Reputation</h2>
-                        <h3 class="fragment">People will read your code!</h3>
+                        <h2>Common Types</h2>
                         <ul>
-                            <li class="fragment">Shared contracts</li>
-                            <li class="fragment">Subcontracts</li>
-                            <li class="fragment">Client dev teams</li>
+                            <li class="fragment">Serial Communications (UART/SPI/I2C)</li>
+                            <li class="fragment">Analog <-> Digital Converters (ADC / DAC)</li>
+                            <li class="fragment">Pulse Width Modulator (PWM)</li>
+                            <li class="fragment">A bunch more that Arduino might not expose (Timers, Comparators, Watchdog, Interrupt on Change</li>
                         </ul>
                     </section>
                 </section>
                 <section>
-                    <h2>What this talk is not about:</h2>
-                    <ul>
-                        <li class="fragment">
-                            <h3 class="fragment">Language</h3>
-                            <p class="fragment">C# / Javascript / Python / Avenue</p>
-                        </li>
-                        <li>
-                            <h3 class="fragment">Architecture</h3>
-                            <p class="fragment">MVC / MVP / MVVM / UI / BLL / DTO / DAL</p>
-                        </li>
-                        <li class="fragment">
-                            <h3 class="fragment">Tooling</h3>
-                            <p class="fragment">Git / Jira / Resharper</p>
-                        </li>
-                    </ul>
-                    <h2 class="fragment">These things won't save you!</h2>
+                    <h2>Serial Communications</h2>
+                    <section>
+                        <div class="fragment">
+                            <h3>UART</h3>
+                            <span>Universal Asynchronous Reciever / Transmitter</span>
+                        </div>
+                        <ul>
+                            <li class="fragment">Serial Port</li>
+                            <li class="fragment">Used for:  Debugging, industrial control</li>
+                            <li class="fragment">RS-232, RS-422, RS-485 define voltage levels</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>SPI / I2C</h3>
+                        <ul>
+                            <li class="fragment">Addressable--multiple devices on a single bus</li>
+                            <li class="fragment">SPI uses 4 wires, I2C uses 2</li>
+                            <li class="fragment">Used for: inter-chip communication on a board</li>
+                        </ul>
+                    </section>
                 </section>
 				<section>
-      	            <h1>What this talk is about:</h1>
-                    <p class="fragment">Fundamentals</p>
-                    <p class="fragment">Continuous Improvement</p>
-                    <p class="fragment">Reviewing your own code</p>
+      	            <h2>Analog/Digital Converters</h2>
+                    <section>
+                        <ul>
+                            <li class="fragment">Analog signal normalized to digital range (0-5V)</li>
+                            <li class="fragment">Sample resolution (usually 10 bits: 0-1023)</li>
+                            <li class="fragment">Used for: Sensors, measurement, audio</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <canvas id="adcChart" width="400" height="300"></canvas>
+                        <script>
+                            var adc = function () {
+                            var chart = new SmoothieChart({maxValue:5,minValue:0});
+                            var timeSeries = new TimeSeries();
+                            chart.addTimeSeries(timeSeries, {lineWidth:2,strokeStyle:'#00ff00'});
+                            chart.streamTo(document.getElementById('adcChart'), 1000);
+
+                            var lowValue = 0,
+                                highValue = 5;
+
+                            // Add points to trace out a square wave
+                            setInterval(function() {
+                                var t = new Date().getTime();
+                                timeSeries.append(t, Math.floor(Math.random() * (highValue - lowValue + 1)) + lowValue);
+                            }, 1000);
+                            };
+                            adc();
+                        </script>
+                    </section>
 			    </section>
                 <section>
-                    <h1>1. Choose meaningful names</h1>
+                    <h2>Pulse Width Modulators</h2>
                     <section>
-                        <h1>Make them descriptive</h1>
+                        <ul>
+                            <li class="fragment">Square wave generation</li>
+                            <li class="fragment">Frequency and average voltage</li>
+                            <li class="fragment">Used for: Motor control, duty cycle (dimming an LED)</li>
+                        </ul>
                     </section>
                     <section>
-                        <h1>Context is (really) important</h1>
-                    </section>
-                    <section>
-                        <h1>Lean on your tools</h1>
-                        <p class="fragment">
-                            Refactor -> Rename
-                            Visual Studio:  (C-r, r)
-                            JetBrains: Shift + F6
-                        </p>
-                    </section>
-                </section>
-                <section>
+                        <canvas id="pwm-chart" width="400" height="200"></canvas>
+                        <label for="pwmRangeOn">On</label>
+                        <input id="pwmRangeOn" type="range" name="points" min="0" max="10">
+                        <label for="pwmRangeOff">Off</label>
+                        <input id="pwmRangeOff" type="range" name="points" min="0" max="10">
+                        <script>
+                            var pwm = function () {
+                                var chart = new SmoothieChart({interpolation:'step',maxValue:5,minValue:0});
+                                var timeSeries = new TimeSeries();
+                                chart.addTimeSeries(timeSeries, {lineWidth:2,strokeStyle:'#00ff00'});
+                                chart.streamTo(document.getElementById('pwm-chart'), 1000);
 
-                    <section>
-                    <h1>2. Write shorter functions</h1>
-                    <p class="fragment">
-                        No...seriously.  Shorter than that.
-                    </p>
-                    </section>
-                    <section>
-                        <h1>Isolate individual cases</h1>
-                    </section>
-                    <section>
-                        <h1>Complex conditionals</h1>
-                        <pre><code class="javascript">
-_checkClickLocation: function (clickEvent) {
-    if (this._mouseClickIsOutsideToolsContainer(containerPosition, clickEvent)) {
-        this._hideLayerTools();
-    }
-},
+                                var lowValue = 0.1,
+                                        highValue = 4.9,
+                                        value = lowValue,
+                                        sliderOn = document.getElementById('pwmRangeOn'),
+                                        sliderOff = document.getElementById('pwmRangeOff'),
+                                        update = function () {
+                                            var s;
+                                            var t = new Date().getTime();
+                                            timeSeries.append(t, value);
+                                            value = value === lowValue ? highValue : lowValue;
+                                            s = value === lowValue ? sliderOn : sliderOff;
+                                            setTimeout(update, s.value * 250);
+                                        }
 
-_mouseClickIsOutsideToolsContainer: function (container, target) {
-    return target.x < container.x ||
-    target.x > container.x + container.w ||
-    target.y < container.y ||
-    target.y > container.y + container.h;
-}
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h1>Avoid anonymous functions</h1>
-                    </section>
-                    <section class="fragment">
-                        <h1>Lean on your tools</h1>
-                        <p class="fragment">
-                            Refactor -> Extract Method
-                            <br/>
-                            Visual Studio: (C-r, e)
-                            <br/>
-                            JetBrains: (C + Alt + m)
-                        </p>
+                                // Add points to trace out a square wave
+                                setTimeout(update, sliderOn.value * 1000);
+                            };
+                            pwm();
+                        </script>
                     </section>
                 </section>
                 <section>
-                    <h1>3. Avoid side effects</h1>
-                </section>
-                <section>
-                    <h1>4. Refactor now (Always be refactoring)</h1>
-                </section>
-                <section>
-                    <h1>5. Automate</h1>
+                    <h2>Questions?</h2>
                 </section>
 		    </div>
 
