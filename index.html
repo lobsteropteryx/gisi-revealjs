@@ -38,14 +38,13 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>Peripherals</h2>
-                    <img data-src="img/gibson.jpg"/>
+                    <h2>GISi Hardware Group</h2>
+                    <h3>6/5/15</h3>
+      	            <h2>Arduino and Peripherals</h2>
 				</section>
                 <section>
                     <section>
@@ -54,6 +53,7 @@
                         <h3 class="fragment">Hardware, not software</h3>
                         <ul>
                             <li class="fragment">Can run simultaneously</li>
+                            <li class="fragment">Can run even when the CPU is shut down</li>
                             <li class="fragment">Low power consumption</li>
                             <li class="fragment">Could be anything! (JPEG compression on imagers, processor cores on FPGA)</li>
                         </ul>
@@ -79,13 +79,26 @@
                             <li class="fragment">Serial Port</li>
                             <li class="fragment">Used for:  Debugging, industrial control</li>
                             <li class="fragment">RS-232, RS-422, RS-485 define voltage levels</li>
+                            <li class="fragment">For RS-232, signal must be between 3 and 15V.  So your 5V or 3.3V chip
+                                can plug right into a PC serial port.
+                            </li>
                         </ul>
                     </section>
                     <section>
-                        <h3>SPI / I2C</h3>
+                        <h3>SPI</h3>
+                        <img src="img/spi.png" style="height:202px;"/>
+                        <ul>
+                            <li class="fragment">Multiple devices on a single bus</li>
+                            <li class="fragment">Uses 4 wires, requires 1 chip select pin per device</li>
+                            <li class="fragment">Used for: inter-chip communication on a board</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>I2C</h3>
+                        <img src="img/i2c.gif"/>
                         <ul>
                             <li class="fragment">Addressable--multiple devices on a single bus</li>
-                            <li class="fragment">SPI uses 4 wires, I2C uses 2</li>
+                            <li class="fragment">2 wires, no chip select</li>
                             <li class="fragment">Used for: inter-chip communication on a board</li>
                         </ul>
                     </section>
@@ -103,7 +116,7 @@
                         <canvas id="adcChart" width="400" height="300"></canvas>
                         <script>
                             var adc = function () {
-                            var chart = new SmoothieChart({maxValue:5,minValue:0});
+                            var chart = new SmoothieChart({maxValue:5,minValue:0, labels:{fontSize:17}});
                             var timeSeries = new TimeSeries();
                             chart.addTimeSeries(timeSeries, {lineWidth:2,strokeStyle:'#00ff00'});
                             chart.streamTo(document.getElementById('adcChart'), 1000);
@@ -127,6 +140,7 @@
                         <ul>
                             <li class="fragment">Square wave generation</li>
                             <li class="fragment">Frequency and average voltage</li>
+                            <li class="fragment">Simulates an analog signal with a digital pin</li>
                             <li class="fragment">Used for: Motor control, duty cycle (dimming an LED)</li>
                         </ul>
                     </section>
@@ -138,7 +152,7 @@
                         <input id="pwmRangeOff" type="range" name="points" min="0" max="10">
                         <script>
                             var pwm = function () {
-                                var chart = new SmoothieChart({interpolation:'step',maxValue:5,minValue:0});
+                                var chart = new SmoothieChart({interpolation:'step',maxValue:5,minValue:0, labels:{fontSize:17}});
                                 var timeSeries = new TimeSeries();
                                 chart.addTimeSeries(timeSeries, {lineWidth:2,strokeStyle:'#00ff00'});
                                 chart.streamTo(document.getElementById('pwm-chart'), 1000);
@@ -163,6 +177,23 @@
                             pwm();
                         </script>
                     </section>
+                </section>
+                <section>
+                    <h2>Other stuff</h2>
+                    <ul>
+                        <li class="fragment">Timers</li>
+                        <li class="fragment">Watchdog</li>
+                        <li class="fragment">Interrupt on Change</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Beyond Arduino</h2>
+                    <span>Why?</span>
+                    <ul>
+                        <li class="fragment">Performance (Power consumption)</li>
+                        <li class="fragment">Cost (Design for manufacture)</li>
+                        <li class="fragment">Learning (Your abstraction layer is hiding important details from you!)</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Questions?</h2>
