@@ -1,9 +1,9 @@
-function isEmptyField (cssClass, field) {
-    var selector = query(cssClass, field)[0];
-    return selector && selector.value === "" && domClass.contains(field, "mandatory");
+function isEmptyField (parentNode, childSelector) {
+    var node = query(childSelector, parentNode)[0];
+    return node && node.value === "" && domClass.contains(parentNode, "mandatory");
 }
 
-if (isEmptyField('.form-control', currentField) ||
-    isEmptyField('.filterSelect', currentField)) {
+if (isEmptyField(currentField, '.form-control') ||
+    isEmptyField(currentField, '.filterSelect')) {
     // ...do something
 }

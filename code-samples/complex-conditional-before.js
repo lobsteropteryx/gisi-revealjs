@@ -3,6 +3,6 @@ if ((query(".form-control", currentField)[0] &&
     domClass.contains(currentField, "mandatory")) ||
     (query(".filterSelect", currentField)[0] &&
     (query(".filterSelect", currentField)[0].value === "") &&
-        domClass.contains(currentField, "mandatory"))) {
+    domClass.contains(currentField, "mandatory"))) {
     // ...do something
 }
