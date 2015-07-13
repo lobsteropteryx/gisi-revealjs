@@ -7,7 +7,7 @@ getSomeFeatures: function(urls) {
         queryTask = new QueryTask(url);
         query = new Query();
         query.where = "1=1";
-        query.outFields = "*";
+        query.outFields = ["*"];
         query.returnGeometry = false;
         deferreds.push(queryTask.execute(query));
     });

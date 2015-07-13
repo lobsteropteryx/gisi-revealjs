@@ -55,7 +55,7 @@
                 <section>
                     <h3>Why?</h3>
                     <ul>
-                        <li class="fragment">Easier to understand (30 second rule)</li>
+                        <li class="fragment">Easier to understand (1 minute rule)</li>
                         <li class="fragment">Easier to test</li>
                         <li class="fragment">Code reuse</li>
                         <li class="fragment">Big functions get bigger! (Change magnets)</li>
@@ -63,19 +63,20 @@
                 </section>
                 <section>
                     <h3>What?!?</h3>
-                    <pre class="code" style="max-height:600px;">
+                    <pre class="code">
                         <code class="javascript code" data-code="./code-samples/long.js" data-trim
-                              style="max-height:600px;"></code>
+                              style="max-height:600px; word-wrap: break-word;"></code>
                     </pre>
                 </section>
                 <section>
                     <section>
                         <h3>How?</h3>
-                        <p>Some things to look for:</p>
+                        <p class="fragment">Always be refactoring!</p>
+                        <h3 class="fragment">Some things to look for:</h3>
                         <ul>
                             <li class="fragment">Deep nesting (> 2 levels)</li>
-                            <li class="fragment">Complex Conditionals</li>
                             <li class="fragment">Anonymous functions</li>
+                            <li class="fragment">Complex Conditionals</li>
                         </ul>
                     </section>
                     <section>
@@ -83,26 +84,14 @@
                         <pre class="code"><code class="javascript code"
                                                 data-code="./code-samples/conditional-body-before.js" data-trim
                                                 style="max-height:600px;"></code>
-                        </code></pre>
+                            </code></pre>
                     </section>
                     <section>
+                        <h3>Not so Deep</h3>
                         <pre class="code"><code class="javascript code"
-                                   data-code="./code-samples/conditional-body-after.js" data-trim
-                                   style="max-height:600px;"></code>
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h3>Complex conditionals</h3>
-                        <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/complex-conditional-before.js" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                        <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/complex-conditional-after.js" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
+                                                data-code="./code-samples/conditional-body-after.js" data-trim
+                                                style="max-height:600px;"></code>
+                            </code></pre>
                     </section>
                     <section>
                         <h3>Anonymous functions</h3>
@@ -121,22 +110,25 @@
                         </pre>
                     </section>
                     <section>
+                        <h3>Complex conditionals</h3>
+                        <pre class="code">
+                            <code class="javascript code"
+                                  data-code="./code-samples/complex-conditional-before.js" data-trim
+                                  style="max-height:600px;"></code>
+                        </pre>
+                        <pre class="code">
+                            <code class="javascript code"
+                                  data-code="./code-samples/complex-conditional-after.js" data-trim
+                                  style="max-height:600px;"></code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h3>Resources:</h3>
                         <ul>
-                            <li class="fragment">More than a screenful (~40 lines @ 1080)</li>
+                            <li class="fragment"><a href="http://refactoring.com/">Refactoring</a> (Martin Fowler)</li>
+                            <li class="fragment"><a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> (Bob Martin)</a></li>
+                            <li class="fragment"></li>
                         </ul>
-                    </section>
-                    <section>
-                        <h1>Lean on your tools</h1>
-                        <p class="fragment">
-                            Refactor -> Extract Method
-                            <br/>
-                            Visual Studio: (C-r, e)
-                            <br/>
-                            JetBrains: (C + Alt + m)
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Resources</h3>
                     </section>
                 </section>
 		    </div>

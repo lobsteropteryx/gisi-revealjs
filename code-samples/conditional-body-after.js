@@ -1,7 +1,7 @@
-submitForm: function () {
+submitForm: function (geometry, erroneousFields) {
     //...
     //some other stuff
-    if (this.formFieldsAreValid && this.geometryIsValid) {
+    if (this.formFieldsAreValid(erroneousFields) && this.geometryIsValid(geometry)) {
         this._addFeatureToLayer();
     }
 }
@@ -15,14 +15,14 @@ formFieldsAreValid: function (erroneousFields) {
 }
 
 geometryIsValid: function (geometry) {
-    var hasErrors = !this.addressGeometry;
+    var hasErrors = !geometry;
     if (hasErrors) {
         showGeometryErrors();
     }
     return hasErrors;
 }
 
-showFormErrors: function () {
+showFormErrors: function (erroneousFields) {
     var elementId;
     if (!erroneousFields[0].children[0].id) {
         elementId = erroneousFields[0].parentElement.children[0].id;
@@ -36,7 +36,7 @@ showFormErrors: function () {
     btn.button('reset');
 }
 
-showGeometryErrors: function (geometry) {
+showGeometryErrors: function () {
     this._resetButton();
     this._showErrorMessageDiv(nls.user.selectLocation, dom.byId("select_location"));
 }
