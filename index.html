@@ -42,80 +42,52 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>GISi Dev Meet #1</h2>
-                    <h3>7/13/15</h3>
-                    <h3>Keep it <em>Short</em></h3>
+      	            <h2>GISi Dev Meet #2</h2>
+                    <h3>8/17/15</h3>
+                    <h3>HTTP Basics</h3>
 				</section>
                 <section>
-                    <h3>Write shorter functions</h3>
-                    <p class="fragment">
-                        No...seriously.  Shorter than that.
-                    </p>
-                </section>
-                <section>
-                    <h3>Why?</h3>
+                    <h3>Creating an API over the Web</h3>
                     <ul>
-                        <li class="fragment">Easier to understand (1 minute rule)</li>
-                        <li class="fragment">Easier to test</li>
-                        <li class="fragment">Code reuse</li>
-                        <li class="fragment">Big functions get bigger! (Change magnets)</li>
+                        <li class="fragment">Verbs</li>
+                        <li class="fragment">Response Codes</li>
+                        <li class="fragment">ETAGs, caching, flat vs. nested, etc. etc.</li>
                     </ul>
                 </section>
                 <section>
-                    <h3>What?!?</h3>
-                    <pre class="code">
-                        <code class="javascript code" data-code="./code-samples/long.js" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
+                    <h3>Verbs</h3>
+                    <p class="fragment">They map to database operations</p>
+                    <ul class="fragment">
+                        <li>GET = select</li>
+                        <li>POST = insert</li>
+                        <li>PUT = update</li>
+                        <li>DELETE = delete</li>
+                    </ul>
+                    <p class="fragment">Use the right tool for the job!</p>
                 </section>
                 <section>
-                    <section>
-                        <h3>How?</h3>
-                        <p class="fragment">Always be refactoring!</p>
-                        <h3 class="fragment">Some things to look for:</h3>
-                        <ul>
-                            <li class="fragment">Deep nesting (> 2 levels)</li>
-                            <li class="fragment">Anonymous functions</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Deep Nesting</h3>
-                        <pre class="code"><code class="javascript code"
-                                                data-code="./code-samples/conditional-body-before.js" data-trim
-                                                style="max-height:600px;"></code>
-                            </code></pre>
-                    </section>
-                    <section>
-                        <h3>Not so Deep</h3>
-                        <pre class="code"><code class="javascript code"
-                                                data-code="./code-samples/conditional-body-after.js" data-trim
-                                                style="max-height:600px;"></code>
-                            </code></pre>
-                    </section>
-                    <section>
-                        <h3>Anonymous functions</h3>
-                        <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/anon-before.js" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                    </section>
-                    <section>
-                        <h3>Named functions</h3>
-                        <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/anon-after.js" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                    </section>
-                    <section>
-                        <h3>Resources:</h3>
-                        <ul>
-                            <li class="fragment"><a href="http://refactoring.com/">Refactoring</a> (Martin Fowler)</li>
-                            <li class="fragment"><a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> (Bob Martin)</a></li>
-                            <li class="fragment"></li>
-                        </ul>
-                    </section>
+                    <h3>Why do we care?</h3>
+                    <p class="fragment">There's a right (ish) way to do it</p>
+                    <ul>
+                        <li class="fragment">Intuitive APIs</li>
+                        <li class="fragment">Cleaner URLs</li>
+                        <li class="fragment">Leverage existing code (dojo/ext stores, backbone fetch)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Exceptions</h3>
+                    <ul>
+                        <li class="fragment">URLs have a maximum length (POST for spatial queries)</li>
+                        <li class="fragment">DELETE is often disabled at the server level</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Response Codes</h3>
+                    <ul>
+                        <li class="fragment">200 OK!</li>
+                        <li class="fragment">4XX The client screwed something up</li>
+                        <li class="fragment">5XX The server screwed something up</li>
+                    </ul>
                 </section>
 		    </div>
 
