@@ -42,104 +42,30 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>GISi Dev Meet #2</h2>
+      	            <h2>GISi Dev Meet #3</h2>
                     <h3>8/17/15</h3>
-                    <h3>HTTP Basics</h3>
+                    <h3>Side Effects and Composition</h3>
 				</section>
                 <section>
-                    <h3>Big Picture -- Creating a RESTful API via HTTP</h3>
+                    <h3>Big Picture -- Functional Programming and State</h3>
                     <ul>
-                        <li class="fragment">Verbs</li>
-                        <li class="fragment">Response Codes</li>
+                        <li class="fragment">OO - We call methods on an object, which modify internal state</li>
+                        <li class="fragment">Functional - We call functions with inputs and outputs --state is stored on the stack</li>
                     </ul>
                 </section>
                 <section>
-                    <h3>Verbs</h3>
-                    <p class="fragment">They map to database operations</p>
-                    <ul class="fragment">
-                        <li>GET = select</li>
-                        <li>POST = insert</li>
-                        <li>PUT = update</li>
-                        <li>DELETE = delete</li>
-                    </ul>
-                    <p class="fragment">Use the right tool for the job!</p>
-                </section>
-                <section>
-                    <h3>Why do we care?</h3>
-                    <p class="fragment">There's a right (ish) way to do it</p>
+                    <h3>Functional has some advantages</h3>
                     <ul>
-                        <li class="fragment">Intuitive APIs</li>
-                        <li class="fragment">Cleaner URLs</li>
-                        <li class="fragment">Leverage existing code (dojo/ext stores, backbone fetch)</li>
+                        <li class="fragment">Parallel processing (no shared state across processes)</li>
+                        <li class="fragment">Testing (minimize scaffolding)</li>
+                        <li class="fragment"></li>
                     </ul>
-                </section>
-                <section>
-                    <h3>Something like:</h3>
-                    <pre class="code">
-                        <code class="csharp code" data-code="./code-samples/verbs_good.cs" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>Yikes!</h3>
-                    <pre class="code">
-                        <code class="csharp code" data-code="./code-samples/verbs_bad.cs" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
-                    <p class="fragment">Get a REST client! (Webstorm, Postman, cUrl)</p>
-                </section>
-                <section>
-                    <h3>Exceptions</h3>
-                    <ul>
-                        <li class="fragment">URLs have a maximum length (POST for spatial queries vs GET)</li>
-                        <li class="fragment">PUT and DELETE are often disabled at the server level (verb tampering)</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Response Codes</h3>
-                    <ul class="fragment">
-                        <li>2xx OK!</li>
-                        <li>4xx Something's wrong with the client request</li>
-                        <li>5xx Something's wrong with the server</li>
-                    </ul>
-                    <p class="fragment">Use the right tool for the job!</p>
-                </section>
-                <section>
-                <h3>Something like:</h3>
-                    <pre class="code">
-                        <code class="csharp code" data-code="./code-samples/codes_good.cs" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>Yikes!</h3>
-                    <pre class="code">
-                        <code class="csharp code" data-code="./code-samples/codes_bad.cs" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>On the client side...</h3>
-                    <pre class="code">
-                        <code class="javascript code" data-code="./code-samples/codes_js.js" data-trim
-                              style="max-height:600px; word-wrap: break-word;"></code>
-                    </pre>
-                    <p class="fragment">This WILL cause bugs!</p>
                 </section>
                 <section>
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="http://www.jmarshall.com/easy/http/">
-                            James Marshall - HTTP Made Really Easy
-                        </a></li>
-                        <li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">
-                            W3C - HTTP Status Codes
-                        </a></li>
-                        <li><a href="http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420">
-                            Martin Fowler - Patterns of Enterprise Application Architecture
-                        </a></li>
-                        <li><a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#restful">
-                            Vinay Sahni - Best Practices for a Pragmatic Restful API
+                        <li><a href="https://leanpub.com/fp-oo">
+                            Functional Programming for the Object-Oriented Programmer
                         </a></li>
                     </ul>
                 </section>
