@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-        
+
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/gisinc2.css" id="theme">
         <link rel="stylesheet" href="css/code-block.css">
@@ -42,66 +42,66 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>GISi Dev Meet #3</h2>
-                    <h3>8/17/15</h3>
-                    <h3>Dependencies and Side Effects</h3>
+      	            <h2>GISi Dev Meet #7</h2>
+                    <h3>1/11/16</h3>
+                    <h3>Automation and Process</h3>
 				</section>
                 <section>
-                    <h3>Big Picture -- Scope</h3>
+                    <h3>Typical Workflow for Code</h3>
                     <ul>
-                        <li class="fragment">Dependencies - What does this code need from "outside?"</li>
-                        <li class="fragment">Side Effects - What changes does this code make that could affect other logic?</li>
-                    </ul>
-                    <p class="fragment">We want to minimize both, and be explicit about them!</p>
-                </section>
-                <section>
-                    <h3>At the Function level</h3>
-                    <pre class="code">
-                        <code class="javascript code"
-                              data-code="./code-samples/function-before.js" data-trim
-                              style="max-height:600px;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>At the function level</h3>
-                    <pre class="code">
-                        <code class="javascript code"
-                              data-code="./code-samples/function-after.js" data-trim
-                              style="max-height:600px;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>Within a Class</h3>
-                    <pre class="code">
-                        <code class="javascript code"
-							  data-code="./code-samples/class-before.js" data-trim
-							  style="max-height:600px;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>Within a class</h3>
-                    <pre class="code">
-                        <code class="javascript code"
-							  data-code="./code-samples/class-after.js" data-trim
-							  style="max-height:600px;"></code>
-                    </pre>
-                </section>
-                <section>
-                    <h3>Functional has some advantages</h3>
-                    <ul>
-                        <li class="fragment">Parallel processing (no shared state across processes)</li>
-                        <li class="fragment">Testing (minimize scaffolding)</li>
-                        <li class="fragment">Examples: Excel, SQL</li>
+						<li class="fragment">Version Control - track changes</li>
+                        <li class="fragment">Feature Branches - isolate changes</li>
+                        <li class="fragment">Build Server - automatically test and deploy</li>
                     </ul>
                 </section>
                 <section>
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="https://leanpub.com/fp-oo">
-                            Functional Programming for the Object-Oriented Programmer
-                        </a></li>
-                    </ul>
+                    <h3>We would probably never...</h3>
+					<ul>
+						<li class="fragment">Make changes "live" on the server</li>
+						<li class="fragment">Not keep our code in version control</li>
+						<li class="fragment">Use a manual process for deployment</li>
+					</ul>
                 </section>
+                <section>
+                    <h3>But what about...</h3>
+					<ul>
+						<li class="fragment">Database?</li>
+						<li class="fragment">Map Services?</li>
+						<li class="fragment">Portal users/groups?</li>
+						<li class="fragment">Server Provisioning?</li>
+					</ul>
+					<p class="fragment">We're only as strong as our weakest link!</p>
+				</section>
+				<section>
+					<h3>How long would it take to bring your project back up from scratch?</h3>
+					<ul>
+						<li class="fragment">In 2016, the norm is minutes or seconds!</li>
+					</ul>
+                </section>
+				<section>
+					<h3>Tools</h3>
+					<ul>
+						<li class="fragment">SQL scripts, <a href="http://www.liquibase.org/">Liquibase</a>, <a href="http://flywaydb.org/">Flyaway</a>,
+							<a href="https://msdn.microsoft.com/en-us/library/mt204009.aspx">SSDT</a></li>
+						<li class="fragment"><a href="http://blogs.esri.com/esri/arcgis/2011/04/12/an-introduction-to-arcpy-mapping-for-arcgis-server-developers/">ArcPy.Mapping</a>,
+							<a href="http://www.spoiledtechie.com/post/2010/08/04/How-to-publish-a-ArcMap-to-the-ArcGIS-Servere280a6.aspx">ArcObjects</a> </li>
+						<li class="fragment"><a href="http://server.arcgis.com/en/portal/latest/administer/linux/scripting-with-the-arcgis-rest-api.htm">Portal API</a></li>
+						<li class="fragment"><a href="https://www.vagrantup.com/">Vagrant</a>, <a href="https://www.packer.io/">Packer</a>, <a href="https://www.docker.com/">Docker</a></li>
+					</ul>
+					<p class="fragment">Think scripting first!</p>
+				</section>
+				<section>
+					<h3>What does this change?</h3>
+					<ul>
+						<li class="fragment">Local database and AGS VMs on your dev laptop (iteration time)</li>
+						<li class="fragment">Fewer bottlenecks with understaffed IT</li>
+						<li class="fragment">Helps understand data dependencies</li>
+						<li class="fragment">What about our clients?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Discussion?</h3>
+				</section>
 		    </div>
 
             <div class="top-bar"> &nbsp;	</div>
