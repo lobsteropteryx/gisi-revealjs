@@ -43,60 +43,67 @@
 			<div class="slides">
 				<section>
       	            <h2>GISi Dev Meet #7</h2>
-                    <h3>1/11/16</h3>
-                    <h3>Automation and Process</h3>
+                    <h3>2/8/16</h3>
+                    <h3>Repository Structure</h3>
 				</section>
                 <section>
-                    <h3>Typical Workflow for Code</h3>
+                    <h3>One big repo, or multiple small ones?</h3>
                     <ul>
-						<li class="fragment">Version Control - track changes</li>
-                        <li class="fragment">Feature Branches - isolate changes</li>
-                        <li class="fragment">Build Server - automatically test and deploy</li>
+						<li class="fragment">Database, back-end, front-end, map docs, geoprocessing tools, etc</li>
+						<li class="fragment">Separation of Concerns - A <em>repository</em> should only have a single reason to change</li>
                     </ul>
                 </section>
                 <section>
-                    <h3>We would probably never...</h3>
+                    <h3>Costs of splitting</h3>
 					<ul>
-						<li class="fragment">Make changes "live" on the server</li>
-						<li class="fragment">Not keep our code in version control</li>
-						<li class="fragment">Use a manual process for deployment</li>
+						<li class="fragment">Package files (package.json, bower.json, nuspec, setup.py)</li>
+						<li class="fragment">Version management, code reviews</li>
+						<li class="fragment">Syncing client and server code</li>
 					</ul>
                 </section>
                 <section>
-                    <h3>But what about...</h3>
+                    <h3>Benefits of splitting</h3>
 					<ul>
-						<li class="fragment">Database?</li>
-						<li class="fragment">Map Services?</li>
-						<li class="fragment">Portal users/groups?</li>
-						<li class="fragment">Server Provisioning?</li>
+						<li class="fragment">Code Reuse!</li>
+						<li class="fragment">Better version tracking</li>
+						<li class="fragment">Faster builds and deployments</li>
 					</ul>
-					<p class="fragment">We're only as strong as our weakest link!</p>
 				</section>
 				<section>
-					<h3>How long would it take to bring your project back up from scratch?</h3>
+					<h3>Methods of Code Reuse</h3>
+					<ol>
+						<li class="fragment">Packaging</li>
+						<li class="fragment">Forking</li>
+						<li class="fragment">Copy/Paste</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Finding Seams</h3>
 					<ul>
-						<li class="fragment">In 2016, the norm is minutes or seconds!</li>
+						<li class="fragment">Client / Server</li>
+						<li class="fragment">Front-end modules (Draw tool, TOC, Filters)</li>
+						<li class="fragment">Class libraries</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Git</h3>
+					<ul>
+						<li class="fragment">We can't check out subdirectories</li>
+						<li class="fragment">Please don't use submodules!</li>
 					</ul>
                 </section>
 				<section>
-					<h3>Tools</h3>
+					<h3>Resources</h3>
 					<ul>
-						<li class="fragment">SQL scripts, <a href="http://www.liquibase.org/">Liquibase</a>, <a href="http://flywaydb.org/">Flyway</a>,
-							<a href="https://msdn.microsoft.com/en-us/library/mt204009.aspx">SSDT</a></li>
-						<li class="fragment"><a href="http://blogs.esri.com/esri/arcgis/2011/04/12/an-introduction-to-arcpy-mapping-for-arcgis-server-developers/">ArcPy.Mapping</a>,
-							<a href="http://www.spoiledtechie.com/post/2010/08/04/How-to-publish-a-ArcMap-to-the-ArcGIS-Servere280a6.aspx">ArcObjects</a> </li>
-						<li class="fragment"><a href="http://server.arcgis.com/en/portal/latest/administer/linux/scripting-with-the-arcgis-rest-api.htm">Portal API</a></li>
-						<li class="fragment"><a href="https://www.vagrantup.com/">Vagrant</a>, <a href="https://www.packer.io/">Packer</a>, <a href="https://www.docker.com/">Docker</a></li>
-					</ul>
-					<p class="fragment">Think scripting first!</p>
-				</section>
-				<section>
-					<h3>What does this change?</h3>
-					<ul>
-						<li class="fragment">Local database and AGS VMs on your dev laptop (iteration time)</li>
-						<li class="fragment">Fewer bottlenecks with understaffed IT</li>
-						<li class="fragment">Helps understand data dependencies</li>
-						<li class="fragment">What about our clients?</li>
+						<li><a href="http://www.hanselman.com/blog/CreatingANuGetPackageIn7EasyStepsPlusUsingNuGetToIntegrateASPNETMVC3IntoExistingWebFormsApplications.aspx">
+							Creating a NuGet Package in 7 easy steps - Plus using NuGet to integrate ASP.NET MVC 3 into existing Web Forms applications
+						</a></li>
+						<li><a href="http://bob.yexley.net/creating-and-maintaining-your-own-bower-package/">
+							Creating and maintaining your own Bower package
+						</a></li>
+						<li><a href="http://docs.python-guide.org/en/latest/shipping/packaging/">
+							Python Guide - Packaging your Code
+						</a></li>
 					</ul>
 				</section>
 				<section>
