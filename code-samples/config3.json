@@ -1,0 +1,37 @@
+{
+  "mapServices": {
+    "json": {
+      "maxIdleTime": 300,
+      "keepAliveInterval": 600,
+      "properties": {
+        "schemaLockingEnabled": false,
+        "supportedImageReturnTypes": "MIME+URL",
+        "maxImageHeight": 2048,
+        "maxImageWidth": 2048,
+        "connectionCheckInterval": 300,
+        "maxDomainCodeCount": "1500000",
+        "useLocalCacheDir": false,
+        "enableDynamicLayers": true,
+        "hasStaticData": false
+      }
+    },
+    "services": [
+      {
+        "input": "mxd/CNIC_Worldwide_CIP.mxd"
+      },
+      {
+        "input": "mxd/CNIC_Worldwide_CIP_Extended.mxd"
+      },
+      {
+        "input": "mxd/DataReconcile.mxd",
+        "summary": "delete test",
+        "json": {
+          "properties": {
+            "maxImageHeight": 4096,
+            "maxImageWidth": 4096
+          }
+        }
+      }
+    ]
+  }
+}

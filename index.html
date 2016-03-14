@@ -40,7 +40,7 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+			<section class="slides">
 				<section>
       	            <h2>GISi Dev Meet #9</h2>
                     <h3>3/14/2016</h3>
@@ -54,37 +54,50 @@
                     <h3>Make it easy for your users</h3>
                     <ul>
 						<li class="fragment">Convention over configuration</li>
-						<li class="fragment">Trying to guess what the user is going to do</li>
+						<li class="fragment">Try to guess what the user is going to want</li>
 						<li class="fragment">This means moving the decision making into the code--now it's <em>your</em> problem!</li>
                     </ul>
                 </section>
-				<section
+				<section>
 					<h3>Evolution of a config file</h3>
-
+                      <pre class="code">
+                            <code class="javascript code"
+                                  data-code="./code-samples/config1.json" data-trim
+                                  style="max-height:600px;"></code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Phase 2</h3>
+                      <pre class="code">
+                            <code class="javascript code"
+                                  data-code="./code-samples/config2.json" data-trim
+                                  style="max-height:600px;"></code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Phase 3</h3>
+                      <pre class="code">
+                            <code class="javascript code"
+                                  data-code="./code-samples/config3.json" data-trim
+                                  style="max-height:600px;"></code>
+                        </pre>
+                </section>
 				<section>
 					<h3>How smart is too smart?</h3>
-					<ul>
-						<li class="fragment">Convention over configuration</li>
-						<li class="fragment">Trying to guess what the user is going to do</li>
-						<li class="fragment">This means moving the decision making into the code--now it's <em>your</em> problem!</li>
-					</ul>
+                    <img src="img/pathological_success.png"/>
+                    <p class="fragment">Don't be afraid to throw!</p>
 				</section>
-				<section>
-					<h3>Example</h3>
-					<ul>
-						<li><a href="http://www.hanselman.com/blog/CreatingANuGetPackageIn7EasyStepsPlusUsingNuGetToIntegrateASPNETMVC3IntoExistingWebFormsApplications.aspx">
-							Creating a NuGet Package in 7 easy steps - Plus using NuGet to integrate ASP.NET MVC 3 into existing Web Forms applications
-						</a></li>
-						<li><a href="http://bob.yexley.net/creating-and-maintaining-your-own-bower-package/">
-							Creating and maintaining your own Bower package
-						</a></li>
-						<li><a href="http://docs.python-guide.org/en/latest/shipping/packaging/">
-							Python Guide - Packaging your Code
-						</a></li>
-					</ul>
-				</section>
+                <section>
+                    <h3>What else can we do to make things easier?</h3>
+                    <ul>
+                        <li class="fragment">Make it easy to get (package management)</li>
+                        <li class="fragment">Make it easy to update (semantic versioning)</li>
+                        <li class="fragment">Make it easy to debug (useful error messages)</li>
+                    </ul>
+                </section>
 				<section>
 					<h3>Discussion?</h3>
+                        <p><a href="https://git.gisinc.com/projects/PYT/repos/mapservicepublisher/browse">Repo</a></p>
 				</section>
 		    </div>
 

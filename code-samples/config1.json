@@ -1,0 +1,37 @@
+{
+  "maps": {
+    "cnic_worldwide_cip": {
+      "input": "mxd/CNIC_Worldwide_CIP.mxd",
+      "output": "output/",
+      "serviceName": "CNIC_Worldwide_CIP",
+      "serverType": "FROM_CONNECTION_FILE",
+      "connectionFilePath": "connections/intg.ags",
+      "copyDataToServer": false,
+      "folderName": "",
+      "summary": "Test service published automagically",
+      "dbConnectionFilePath": "connections/intg_db.sde"
+    },
+    "cnic_worldwide_cip_extended": {
+      "input": "mxd/CNIC_Worldwide_CIP_Extended.mxd",
+      "output": "output/",
+      "serviceName": "CNIC_Worldwide_CIP_Extended",
+      "serverType": "FROM_CONNECTION_FILE",
+      "connectionFilePath": "connections/intg.ags",
+      "copyDataToServer": false,
+      "folderName": "",
+      "summary": "Test service published automagically",
+      "dbConnectionFilePath": "connections/intg_db.sde"
+    },
+    "data_reconcile": {
+      "input": "mxd/DataReconcile.mxd",
+      "output": "output/",
+      "serviceName": "DataReconcile",
+      "serverType": "FROM_CONNECTION_FILE",
+      "connectionFilePath": "connections/intg.ags",
+      "copyDataToServer": false,
+      "folderName": "AutomationTests",
+      "summary": "Test service published automagically",
+      "dbConnectionFilePath": "connections/intg_db.sde",
+    }
+  }
+}
