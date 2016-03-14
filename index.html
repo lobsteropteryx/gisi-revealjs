@@ -42,58 +42,35 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-      	            <h2>GISi Dev Meet #8</h2>
-                    <h3>2/8/16</h3>
-                    <h3>Repository Structure</h3>
+      	            <h2>GISi Dev Meet #9</h2>
+                    <h3>3/14/2016</h3>
+                    <h3>Sensible Defaults vs Pathological Success</h3>
+				</section>
+				<section>
+					<h3>Flexibility</h3>
+					<img src="img/flexibility.png"/>
 				</section>
                 <section>
-                    <h3>One big repo, or multiple small ones?</h3>
+                    <h3>Make it easy for your users</h3>
                     <ul>
-						<li class="fragment">Database, back-end, front-end, map docs, geoprocessing tools, etc</li>
-						<li class="fragment">Separation of Concerns - A <em>repository</em> should only have a single reason to change</li>
+						<li class="fragment">Convention over configuration</li>
+						<li class="fragment">Trying to guess what the user is going to do</li>
+						<li class="fragment">This means moving the decision making into the code--now it's <em>your</em> problem!</li>
                     </ul>
                 </section>
-                <section>
-                    <h3>Costs of splitting</h3>
+				<section
+					<h3>Evolution of a config file</h3>
+
+				<section>
+					<h3>How smart is too smart?</h3>
 					<ul>
-						<li class="fragment">Package files (package.json, bower.json, nuspec, setup.py)</li>
-						<li class="fragment">Version management, code reviews</li>
-						<li class="fragment">Syncing client and server code</li>
-					</ul>
-                </section>
-                <section>
-                    <h3>Benefits of splitting</h3>
-					<ul>
-						<li class="fragment">Code Reuse!</li>
-						<li class="fragment">Better version tracking</li>
-						<li class="fragment">Faster builds and deployments</li>
+						<li class="fragment">Convention over configuration</li>
+						<li class="fragment">Trying to guess what the user is going to do</li>
+						<li class="fragment">This means moving the decision making into the code--now it's <em>your</em> problem!</li>
 					</ul>
 				</section>
 				<section>
-					<h3>Methods of Code Reuse</h3>
-					<ol>
-						<li class="fragment">Packaging</li>
-						<li class="fragment">Forking</li>
-						<li class="fragment">Copy/Paste</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Finding Seams</h3>
-					<ul>
-						<li class="fragment">Client / Server</li>
-						<li class="fragment">Front-end modules (Draw tool, TOC, Filters)</li>
-						<li class="fragment">Class libraries</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Git</h3>
-					<ul>
-						<li class="fragment">We can't check out subdirectories</li>
-						<li class="fragment">Please don't use submodules!</li>
-					</ul>
-                </section>
-				<section>
-					<h3>Resources</h3>
+					<h3>Example</h3>
 					<ul>
 						<li><a href="http://www.hanselman.com/blog/CreatingANuGetPackageIn7EasyStepsPlusUsingNuGetToIntegrateASPNETMVC3IntoExistingWebFormsApplications.aspx">
 							Creating a NuGet Package in 7 easy steps - Plus using NuGet to integrate ASP.NET MVC 3 into existing Web Forms applications
