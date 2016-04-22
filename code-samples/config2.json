@@ -1,0 +1,21 @@
+{
+  "mapServices": {
+    "services": [
+      "cnic_worldwide_cip": {
+        "input": "mxd/CNIC_Worldwide_CIP.mxd",
+        "output": "output/",
+        "connectionFilePath": "connections/int.portaladmin_navywges10agst.gisinc.local_6080.ags"
+      },
+      "cnic_worldwide_cip_extended": {
+        "input": "mxd/CNIC_Worldwide_CIP_Extended.mxd",
+        "output": "output/",
+        "connectionFilePath": "connections/int.portaladmin_navywges10agst.gisinc.local_6080.ags"
+      },
+      "data_reconcile": {
+        "input": "mxd/DataReconcile.mxd",
+        "output": "output/",
+        "connectionFilePath": "connections/int.portaladmin_navywges10agst.gisinc.local_6080.ags"
+      }
+    ]
+  }
+}
