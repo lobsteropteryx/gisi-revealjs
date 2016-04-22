@@ -42,62 +42,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<section class="slides">
 				<section>
-      	            <h2>GISi Dev Meet #9</h2>
-                    <h3>3/14/2016</h3>
-                    <h3>Sensible Defaults vs Pathological Success</h3>
+					<h2>GISi Tech Exchange</h2>
+					<h3>4/22/2016</h3>
+					<h3>SLAP - Simple Library for Automating Publication</h3>
 				</section>
 				<section>
-					<h3>Flexibility</h3>
-					<img src="img/flexibility.png"/>
+					<h3>Typical Workflow for Code</h3>
+					<ul>
+						<li class="fragment">Version Control - track changes</li>
+						<li class="fragment">Feature Branches - isolate changes</li>
+						<li class="fragment">Build Server - automatically test and deploy</li>
+						<li class="fragment">Promotion - Integration => UAT => Production</li>
+					</ul>
 				</section>
-                <section>
-                    <h3>Make it easy for your users</h3>
-                    <ul>
-						<li class="fragment">Convention over configuration</li>
-						<li class="fragment">Try to guess what the user is going to want</li>
-						<li class="fragment">This means moving the decision making into the code--now it's <em>your</em> problem!</li>
-                    </ul>
-                </section>
 				<section>
-					<h3>Evolution of a config file</h3>
-                      <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/config1.json" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                </section>
-                <section>
-                    <h3>Phase 2</h3>
-                      <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/config2.json" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                </section>
-                <section>
-                    <h3>Phase 3</h3>
-                      <pre class="code">
-                            <code class="javascript code"
-                                  data-code="./code-samples/config3.json" data-trim
-                                  style="max-height:600px;"></code>
-                        </pre>
-                </section>
-				<section>
-					<h3>How smart is too smart?</h3>
-                    <img src="img/pathological_success.png"/>
-                    <p class="fragment">Don't be afraid to throw!</p>
-				</section>
-                <section>
-                    <h3>What else can we do to make things easier?</h3>
-                    <ul>
-                        <li class="fragment">Make it easy to get (package management)</li>
-                        <li class="fragment">Make it easy to update (semantic versioning)</li>
-                        <li class="fragment">Make it easy to debug (useful error messages)</li>
-                    </ul>
-                </section>
-				<section>
-					<h3>Discussion?</h3>
-                        <p><a href="https://git.gisinc.com/projects/PYT/repos/mapservicepublisher/browse">Repo</a></p>
+					<h3>We would probably never...</h3>
+					<ul>
+						<li class="fragment">Make changes "live" on the server</li>
+						<li class="fragment">Not keep our code in version control</li>
+						<li class="fragment">Use a manual process for deployment</li>
+					</ul>
+					<p class="fragment">But this is our normal workflow for map services!</p>
 				</section>
 		    </div>
 
