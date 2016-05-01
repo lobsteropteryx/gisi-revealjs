@@ -25,14 +25,14 @@
  * green #588f27
  *********************************************/
 body {
-  background: #20396d;
-  background: -moz-radial-gradient(center, circle cover, #20396d 0%, #3d66c8 100%);
+  background: #213A6E;
+  background: -moz-radial-gradient(center, circle cover, #213A6E 0%, #3d66c8 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #20396d), color-stop(100%, #3d66c8));
-  background: -webkit-radial-gradient(center, circle cover, #20396d 0%, #3d66c8 100%);
-  background: -o-radial-gradient(center, circle cover, #20396d 0%, #3d66c8 100%);
-  background: -ms-radial-gradient(center, circle cover, #20396d 0%, #3d66c8 100%);
-  background: radial-gradient(center, circle cover, #20396d 0%, #3d66c8 100%);
-  background-color: #20396d; }
+  background: -webkit-radial-gradient(center, circle cover, #213A6E 0%, #3d66c8 100%);
+  background: -o-radial-gradient(center, circle cover, #213A6E 0%, #3d66c8 100%);
+  background: -ms-radial-gradient(center, circle cover, #213A6E 0%, #3d66c8 100%);
+  background: radial-gradient(center, circle cover, #213A6E 0%, #3d66c8 100%);
+  background-color: #213A6E; }
 
 .top-bar {
   position: absolute;
@@ -52,11 +52,13 @@ body {
 .logo {
   display: block;
   position: absolute;
+  top: 50px;
   left: 100px;
   background: url(../../img/sprite.png) 0 0 no-repeat;
   font-size: 0;
   width: 102px;
-  height: 105px; }
+  height: 105px;
+}
 
 .arrow {
   display: block;
