@@ -1,8 +1,10 @@
 {
-    "agsUrl": "https://myagsserver.com:6443/arcgis/admin",
+    "agsUrl": "https://myagsserver.com/arcgis/admin",
     "mapServices": {
         "services": [
-            {"input": "myMap.mxd"}
+            {"input": "some/folder/map1.mxd"},
+            {"input": "some/folder/map2.mxd"},
+            {"input": "some/folder/map3.mxd"}
         ]
     }
 }

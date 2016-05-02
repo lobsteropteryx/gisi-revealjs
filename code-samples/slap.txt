@@ -1,2 +1,2 @@
 pip install slap
-slap -c config.json -i myMap.mxd -u myUsername -p myPassword
+slap -a -c config.json -u myUsername -p myPassword
