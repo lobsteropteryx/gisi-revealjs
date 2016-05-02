@@ -1,0 +1,8 @@
+{
+    "agsUrl": "https://myagsserver.com:6443/arcgis/admin",
+    "mapServices": {
+        "services": [
+            {"input": "myMap.mxd"}
+        ]
+    }
+}
