@@ -1,2 +1,0 @@
-pip install slap
-slap -a -c config.json -u myUsername -p myPassword
