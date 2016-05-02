@@ -100,7 +100,7 @@ em {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #eeeeee;
-  font-family: "Montserrat", Impact, sans-serif;
+  font-family: "Trebuchet", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: -0.03em;
   text-transform: none;
@@ -205,7 +205,7 @@ body {
   background-color: #20396d; }
 
 .reveal {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Trebuchet", sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #eeeeee; }
@@ -225,7 +225,7 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #eeeeee;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Trebuchet", sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
