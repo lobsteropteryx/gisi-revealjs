@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			},
 			themes: {
 				files: {
-                    'css/theme/gisinc2.css': 'css/theme/source/gisinc2.scss',
+                    'css/theme/gisinc2.css': 'css/theme/source/gisinc.scss',
 					'css/theme/black.css': 'css/theme/source/black.scss',
 					'css/theme/white.css': 'css/theme/source/white.scss',
 					'css/theme/league.css': 'css/theme/source/league.scss',
