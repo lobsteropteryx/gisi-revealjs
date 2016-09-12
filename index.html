@@ -13,9 +13,10 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-        
+
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/gisinc.css" id="theme">
+        <link rel="stylesheet" href="css/code-block.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,23 +37,24 @@
 
 	<body>
 
-		<div class="reveal">
+		<section class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+			<section class="slides">
 				<section>
-      	            GISi
+					GISi
 				</section>
 				<section>
-      	            <a href="http://gisinc.com">Check out our website</a>
-			    </section>
-		    </div>
+					<a href="http://gisinc.com">Check out our website</a>
+				</section>
+		    </section>
 
+		<div>
             <div class="top-bar"> &nbsp;	</div>
             <a class="logo" href="http://gisinc.com/" title="Geographic Information Services, Inc."> &nbsp; </a>
 
 		</div>
-
+		</section>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -70,6 +72,7 @@
 
 				// Optional reveal.js plugins
 				dependencies: [
+                    { src: './plugin/externalcode/externalcode.js', condition: function() { return !!document.querySelector( '[data-code]' ); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
