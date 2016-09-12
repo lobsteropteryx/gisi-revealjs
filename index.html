@@ -42,10 +42,71 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<section class="slides">
 				<section>
-					GISi
+					<h2>GISi Dev Meet #12</h2>
+					<h3>9/12/2016</h3>
+					<h3>SOLID</h3>
 				</section>
 				<section>
-					<a href="http://gisinc.com">Check out our website</a>
+					<h3>WTH is SOLID?</h3>
+					<ul>
+						<li class="fragment">A set of design principles</li>
+						<li class="fragment">Primarily apply to OO classes (from ~2001)</li>
+						<li class="fragment">Michael Feathers, Robert Martin</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Single Responsibility</h3>
+					<p>A class should...</p>
+					<ul>
+						<li class="fragment">Have a single reason to change</li>
+						<li class="fragment">Ex: MVC, MVVP</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Open/Closed</h3>
+					<p>A class should...</p>
+					<ul>
+						<li class="fragment">Be open for extension, closed for modification</li>
+						<li class="fragment">Ex: Glimpse data, SpinalMap</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Liskov Substitution</h3>
+					<p>A class should...</p>
+					<ul>
+						<li class="fragment">Be substitutable for its base type</li>
+						<li class="fragment">Ex: Geometry vs. Point, Polygon, etc.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Interface Segregation</h3>
+					<p>A class should...</p>
+					<ul>
+						<li class="fragment">Have different interfaces for different clients</li>
+						<li class="fragment">Ex: ArcObjects (PointClass implements 30 interfaces)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Dependency Inversion</h3>
+					<p>A class should...</p>
+					<ul>
+						<li class="fragment">Depend on abstractions, not implementation</li>
+						<li class="fragment">Ex: IDbContext, ArcObjects - NearestNeighbor</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Resources</h3>
+					<ul>
+						<li><a href="http://www.codemag.com/article/1001061">
+							"S.O.L.I.D. Software Development, One Step at a Time", Derick Bailey
+						</a></li>
+						<li><a href="https://www.amazon.com/Agile-Principles-Patterns-Practices-C/dp/0131857258/ref=sr_1_2?ie=UTF8&qid=1473685148&sr=8-2&keywords=principles+programs+practices+robert+martin">
+							"Agile Principles, Patterns and Practices in C#", Robert Martin
+						</a></li>
+						<li><a href="https://cleancoders.com/videos/clean-code/solid-principles#clean-code-episode-8">
+							Clean Coders
+						</a></li>
+					</ul>
 				</section>
 		    </section>
 
